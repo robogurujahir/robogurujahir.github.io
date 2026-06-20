@@ -247,19 +247,6 @@ header{
   padding:18px;
 }
 
-.diagram-frame::before{
-  content:"FIG. 01 — SUBJECT";
-  position:absolute;
-  top:-11px;
-  left:16px;
-  background:#0B0D0E;
-  padding:0 8px;
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;
-  letter-spacing:.1em;
-  color:#4FA37C;
-}
-
 .diagram-frame img{
   width:100%;
   aspect-ratio:4/5;
@@ -311,7 +298,6 @@ header{
   display:block;
   margin-bottom:12px;
 }
-.eyebrow::before{ content:"§ "; color:#FF6B35; }
 
 .section-title{
   font-size:36px;
