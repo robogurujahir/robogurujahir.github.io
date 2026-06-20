@@ -5,179 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Roboguru Jahir | AI & Robotics Educator</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-background:#050816;
-color:white;
-line-height:1.6;
-}
-
-header{
-padding:20px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#0A192F;
-position:sticky;
-top:0;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#00D4FF;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:60px;
-color:#00D4FF;
-}
-
-.hero p{
-font-size:22px;
-max-width:700px;
-margin-top:15px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#00D4FF;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:30px;
-}
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-font-size:40px;
-margin-bottom:30px;
-color:#00D4FF;
-text-align:center;
-}
-
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.card{
-background:#0A192F;
-padding:25px;
-border-radius:15px;
-}
-
-.card h3{
-color:#64FFDA;
-font-size:30px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.project-card{
-background:#0A192F;
-padding:20px;
-border-radius:15px;
-}
-
-.contact{
-text-align:center;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#0A192F;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-text-decoration:none;
-font-size:24px;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<div class="particles"></div>
+
 <header>
 <div class="logo">Roboguru Jahir</div>
+
 <nav>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
+<a href="#research">Research</a>
+<a href="#training">Training</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
+
+<div class="hero-text">
 <h1>Jahir Anwar</h1>
+
+<h2 id="typing"></h2>
+
 <p>
-Robotics Trainer • AI Educator • Researcher • Content Creator
+Helping students learn Robotics, AI, IoT and 3D Printing through hands-on projects.
 </p>
+
 <a href="#projects" class="btn">View Projects</a>
+</div>
+
+<div class="hero-image">
+<img src="jahir.jpg" alt="Jahir Anwar">
+</div>
+
 </section>
 
 <section id="about">
-<h2 class="section-title">About Me</h2>
-<div class="about">
+
+<h2>About Me</h2>
+
 <p>
 Hi, I'm Jahir Anwar, also known as Roboguru Jahir.
-I am a Robotics Trainer, AI Educator, Researcher, and Content Creator.
+I am a Robotics Trainer, AI Educator, Researcher and Content Creator.
 I completed my M.E. from Jadavpur University and currently work as Lead Trainer at MAMA Robotics.
-My mission is to help students learn Robotics, AI, IoT and 3D Printing through hands-on projects.
+My mission is to help students develop future-ready skills through Robotics, AI, IoT and 3D Printing.
 </p>
-</div>
+
 </section>
 
-<section>
-<h2 class="section-title">Achievements</h2>
-<div class="stats">
+<section class="stats">
+
 <div class="card">
 <h3>500+</h3>
 <p>Students Trained</p>
@@ -197,53 +80,123 @@ My mission is to help students learn Robotics, AI, IoT and 3D Printing through h
 <h3>1</h3>
 <p>Patent</p>
 </div>
-</div>
+
 </section>
 
 <section id="projects">
-<h2 class="section-title">Featured Projects</h2>
 
-<div class="projects">
+<h2>Featured Projects</h2>
 
-<div class="project-card">
+<div class="grid">
+
+<div class="project">
 <h3>Smart Bridge-X</h3>
-<p>Automatic bridge system using sensors and Arduino.</p>
+<p>Automatic bridge system using Arduino and sensors.</p>
 </div>
 
-<div class="project-card">
+<div class="project">
 <h3>Smart Waste Bin</h3>
-<p>IoT-based smart waste monitoring solution.</p>
+<p>Smart waste monitoring system.</p>
 </div>
 
-<div class="project-card">
+<div class="project">
 <h3>Smart Shoes</h3>
-<p>Assistive technology for visually impaired people.</p>
+<p>Assistive project for visually impaired people.</p>
 </div>
 
-<div class="project-card">
+<div class="project">
 <h3>Rain Alert System</h3>
-<p>Automatic weather detection and alert project.</p>
+<p>Automatic weather detection project.</p>
 </div>
 
 </div>
+
+</section>
+
+<section id="research">
+
+<h2>Research & Publications</h2>
+
+<div class="grid">
+
+<div class="project">
+<h3>M.E. Thesis</h3>
+<p>3D Printed PETG-Based Forearm Wound Protector.</p>
+</div>
+
+<div class="project">
+<h3>Research Papers</h3>
+<p>3 Published Research Papers.</p>
+</div>
+
+<div class="project">
+<h3>Patent</h3>
+<p>Innovative Engineering Project Patent.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="training">
+
+<h2>Training Programs</h2>
+
+<div class="grid">
+
+<div class="project">
+<h3>Foundation Robotics</h3>
+<p>Nursery to Class 3</p>
+</div>
+
+<div class="project">
+<h3>Junior Tech</h3>
+<p>Class 4 to 6</p>
+</div>
+
+<div class="project">
+<h3>Skill Builder</h3>
+<p>Class 7 to 9</p>
+</div>
+
+<div class="project">
+<h3>Career Tech</h3>
+<p>Class 10 to 12</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-<h2 class="section-title">Contact Me</h2>
 
-<div class="contact">
-<p>Email: your@email.com</p>
-<p>Website: robogurujahir.com</p>
+<h2>Contact Me</h2>
 
-<a class="btn" href="https://wa.me/91XXXXXXXXXX">
-WhatsApp Me
+<p>Email: robogurujahir@gmail.com</p>
+
+<p>WhatsApp: +91 6295172561</p>
+
+<p>
+<a href="https://youtube.com/@robogurujahir" target="_blank">
+YouTube Channel
 </a>
-</div>
+</p>
+
 </section>
 
+<a class="whatsapp" href="https://wa.me/916295172561">
+💬
+</a>
+
 <footer>
-<p>© 2026 Roboguru Jahir | AI • Robotics • STEM Education</p>
+
+<p>
+© 2026 Roboguru Jahir
+</p>
+
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
