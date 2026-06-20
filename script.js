@@ -1,28 +1,17 @@
-const roles = [
-  "Robotics & AI Educator",
-  "Researcher",
-  "Content Creator"
-];
+const reveals = document.querySelectorAll(".reveal");
 
-let roleIndex = 0;
-let charIndex = 0;
+window.addEventListener("scroll",()=>{
 
-function typeEffect() {
-  const typingElement = document.getElementById("typing");
+reveals.forEach((element)=>{
 
-  if (!typingElement) return;
+const top = element.getBoundingClientRect().top;
 
-  const currentRole = roles[roleIndex];
-  typingElement.textContent = currentRole.substring(0, charIndex);
+if(top < window.innerHeight - 100){
 
-  charIndex++;
+element.classList.add("active");
 
-  if (charIndex > currentRole.length) {
-    charIndex = 0;
-    roleIndex = (roleIndex + 1) % roles.length;
-  }
-
-  setTimeout(typeEffect, 120);
 }
 
-window.onload = typeEffect;
+});
+
+});
