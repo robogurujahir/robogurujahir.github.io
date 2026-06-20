@@ -93,15 +93,6 @@ header{
   letter-spacing:.02em;
   color:#F5F1E8;
 }
-.logo::before{
-  content:"[ ";
-  color:#FF6B35;
-}
-.logo::after{
-  content:" ]";
-  color:#FF6B35;
-}
-
 .nav-links{
   display:flex;
   gap:34px;
