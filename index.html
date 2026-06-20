@@ -1,92 +1,309 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Roboguru Jahir | Robotics & AI Educator</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#F7F5F2;
+color:#111827;
+line-height:1.8;
+}
+
+/* Navigation */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid #e5e7eb;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#00AEEF;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#111827;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00AEEF;
+}
+
+.cta-btn{
+background:#00AEEF;
+color:white;
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* Hero */
+
+.hero{
+max-width:1200px;
+margin:auto;
+padding:150px 20px 100px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+}
+
+.hero-content{
+flex:1;
+}
+
+.badge{
+display:inline-block;
+background:#dbeafe;
+color:#2563eb;
+padding:8px 16px;
+border-radius:30px;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+color:#4b5563;
+margin-bottom:30px;
+max-width:600px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#00AEEF;
+color:white;
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-secondary{
+border:2px solid #00AEEF;
+color:#00AEEF;
+padding:14px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-image img{
+width:380px;
+height:380px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* About */
+
+.about{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.about-card{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card p{
+font-size:18px;
+color:#4b5563;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero-image img{
+width:280px;
+height:280px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="bg"></div>
-
 <header>
-  <div class="logo">Roboguru Jahir</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#research">Research</a>
-    <a href="#training">Training</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="navbar">
+
+<div class="logo">
+Roboguru Jahir
+</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#">Projects</a>
+<a href="#">Research</a>
+<a href="#">Training</a>
+<a href="#">Contact</a>
+</div>
+
+<a href="#" class="cta-btn">
+Book a Workshop
+</a>
+
+</div>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <span class="badge">Available for Workshops & Collaborations</span>
-    <h1>Building Future Innovators Through Robotics & AI</h1>
-    <h2 id="typing"></h2>
-    <p>Empowering students with Robotics, AI, IoT and 3D Printing through practical learning and innovation.</p>
-    <div class="buttons">
-      <a class="btn" href="#projects">Explore Projects</a>
-      <a class="btn secondary" href="#contact">Book a Workshop</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="jahir.jpg" alt="Jahir Anwar">
-  </div>
-</section>
 
-<section id="about">
-<h2>About Me</h2>
-<p>Hi, I'm Jahir Anwar (Roboguru Jahir), a Robotics Trainer, AI Educator, Researcher and Content Creator. I help students build future-ready skills through Robotics, AI, IoT and 3D Printing.</p>
-</section>
+<div class="hero-content">
 
-<section class="stats">
-<div class="card"><h3>500+</h3><p>Students Trained</p></div>
-<div class="card"><h3>10+</h3><p>Schools Served</p></div>
-<div class="card"><h3>20+</h3><p>Projects Built</p></div>
-<div class="card"><h3>3</h3><p>Research Papers</p></div>
-<div class="card"><h3>1</h3><p>Patent</p></div>
-</section>
-
-<section id="projects">
-<h2>Featured Projects</h2>
-<div class="grid">
-<div class="card">Smart Bridge‑X</div>
-<div class="card">Smart Waste Bin</div>
-<div class="card">Smart Shoes for Blind Person</div>
-<div class="card">Rain Alert System</div>
+<div class="badge">
+🚀 Robotics • AI • Innovation
 </div>
-</section>
 
-<section id="research">
-<h2>Research & Publications</h2>
-<div class="grid">
-<div class="card">M.E. Thesis</div>
-<div class="card">Research Papers</div>
-<div class="card">Patent Work</div>
+<h1>
+Hey Innovators 🤖
+</h1>
+
+<p>
+
+I'm Jahir.
+
+A Robotics Trainer, AI Educator, Researcher and Content Creator helping students build future-ready skills through Robotics, Artificial Intelligence, IoT and 3D Printing.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+Explore Projects
+</a>
+
+<a href="https://youtube.com/@robogurujahir" target="_blank" class="btn-secondary">
+Watch YouTube
+</a>
+
 </div>
-</section>
 
-<section id="training">
-<h2>Training Programs</h2>
-<div class="grid">
-<div class="card">Foundation Robotics</div>
-<div class="card">Junior Tech</div>
-<div class="card">Skill Builder</div>
-<div class="card">Career Tech</div>
 </div>
+
+<div class="hero-image">
+
+<img src="jahir.jpg" alt="Jahir Anwar">
+
+</div>
+
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: robogurujahir@gmail.com</p>
-<a class="btn" target="_blank" href="https://wa.me/916295172561">Chat on WhatsApp</a>
-<a class="btn secondary" target="_blank" href="https://youtube.com/@robogurujahir">YouTube Channel</a>
+<section id="about" class="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about-card">
+
+<p>
+
+Hi, I'm Jahir Anwar, also known as Roboguru Jahir.
+
+I am a Robotics Trainer, AI Educator, Researcher and Content Creator. I completed my M.E. from Jadavpur University and currently work as Lead Trainer at MAMA Robotics.
+
+My mission is to make Robotics, Artificial Intelligence, IoT and 3D Printing accessible to students through hands-on learning, innovation and real-world projects.
+
+</p>
+
+</div>
+
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>
+```
