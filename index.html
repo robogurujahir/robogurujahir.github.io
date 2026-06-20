@@ -1,10 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roboguru Jahir</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roboguru Jahir | AI & Robotics Educator</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#050816;
+color:white;
+line-height:1.6;
+}
+
+header{
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0A192F;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00D4FF;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#00D4FF;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#00D4FF;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:30px;
+color:#00D4FF;
+text-align:center;
+}
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.card{
+background:#0A192F;
+padding:25px;
+border-radius:15px;
+}
+
+.card h3{
+color:#64FFDA;
+font-size:30px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project-card{
+background:#0A192F;
+padding:20px;
+border-radius:15px;
+}
+
+.contact{
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0A192F;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:24px;
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Roboguru Jahir</h1>
-    <p>AI, Robotics & Technology Educator</p>
+
+<header>
+<div class="logo">Roboguru Jahir</div>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Jahir Anwar</h1>
+<p>
+Robotics Trainer • AI Educator • Researcher • Content Creator
+</p>
+<a href="#projects" class="btn">View Projects</a>
+</section>
+
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about">
+<p>
+Hi, I'm Jahir Anwar, also known as Roboguru Jahir.
+I am a Robotics Trainer, AI Educator, Researcher, and Content Creator.
+I completed my M.E. from Jadavpur University and currently work as Lead Trainer at MAMA Robotics.
+My mission is to help students learn Robotics, AI, IoT and 3D Printing through hands-on projects.
+</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Achievements</h2>
+<div class="stats">
+<div class="card">
+<h3>500+</h3>
+<p>Students Trained</p>
+</div>
+
+<div class="card">
+<h3>10+</h3>
+<p>Schools Served</p>
+</div>
+
+<div class="card">
+<h3>3</h3>
+<p>Research Papers</p>
+</div>
+
+<div class="card">
+<h3>1</h3>
+<p>Patent</p>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Smart Bridge-X</h3>
+<p>Automatic bridge system using sensors and Arduino.</p>
+</div>
+
+<div class="project-card">
+<h3>Smart Waste Bin</h3>
+<p>IoT-based smart waste monitoring solution.</p>
+</div>
+
+<div class="project-card">
+<h3>Smart Shoes</h3>
+<p>Assistive technology for visually impaired people.</p>
+</div>
+
+<div class="project-card">
+<h3>Rain Alert System</h3>
+<p>Automatic weather detection and alert project.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact">
+<p>Email: your@email.com</p>
+<p>Website: robogurujahir.com</p>
+
+<a class="btn" href="https://wa.me/91XXXXXXXXXX">
+WhatsApp Me
+</a>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Roboguru Jahir | AI • Robotics • STEM Education</p>
+</footer>
+
 </body>
 </html>
