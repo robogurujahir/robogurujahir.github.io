@@ -1,37 +1,28 @@
-const text = [
-"Robotics Trainer",
-"AI Educator",
-"Researcher",
-"Content Creator"
+const roles = [
+  "Robotics & AI Educator",
+  "Researcher",
+  "Content Creator"
 ];
 
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+let roleIndex = 0;
+let charIndex = 0;
 
-(function type(){
+function typeEffect() {
+  const typingElement = document.getElementById("typing");
 
-if(count === text.length){
-count = 0;
+  if (!typingElement) return;
+
+  const currentRole = roles[roleIndex];
+  typingElement.textContent = currentRole.substring(0, charIndex);
+
+  charIndex++;
+
+  if (charIndex > currentRole.length) {
+    charIndex = 0;
+    roleIndex = (roleIndex + 1) % roles.length;
+  }
+
+  setTimeout(typeEffect, 120);
 }
 
-currentText = text[count];
-letter = currentText.slice(0, ++index);
-
-document.getElementById("typing").textContent = letter;
-
-if(letter.length === currentText.length){
-
-count++;
-index = 0;
-
-setTimeout(type,1000);
-
-}else{
-
-setTimeout(type,120);
-
-}
-
-})();
+window.onload = typeEffect;
