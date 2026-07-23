@@ -1,3 +1,5 @@
+const API_URL = "https://script.google.com/macros/s/AKfycbz_H6FcqcZY3Nt6xj1fPJSqo4wCrjhnDmXigTgRhUZhVCRGes4OtjTn0rqkmcLaLjEy6g/exec";
+
 function calculateScore() {
 
     let total = 0;
@@ -57,21 +59,49 @@ function calculateScore() {
 
     }
 
+    // Show Result
     document.getElementById("result").style.display = "block";
 
     document.getElementById("score").innerHTML =
         "📊 Your Score : <b>" + total + " / 100</b>";
 
     document.getElementById("status").innerHTML = status;
-
     document.getElementById("status").style.color = color;
 
     document.getElementById("advice").innerHTML =
         "<b>Personalized Advice</b><br><br>" + advice;
 
-    // Scroll to result
+    // Scroll to Result
     document.getElementById("result").scrollIntoView({
         behavior: "smooth"
+    });
+
+    // ==========================
+    // Save Data to Google Sheets
+    // ==========================
+
+    const formData = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        occupation: document.getElementById("occupation").value,
+        score: total,
+        result: status
+    };
+
+    fetch(API_URL, {
+        method: "POST",
+        redirect: "follow",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Saved to Google Sheet");
+    })
+    .catch(error => {
+        console.error("Error:", error);
     });
 
 }
