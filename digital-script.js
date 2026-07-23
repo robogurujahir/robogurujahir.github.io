@@ -2,6 +2,10 @@ const API_URL = "https://script.google.com/macros/s/AKfycbz_H6FcqcZY3Nt6xj1fPJSq
 
 function calculateScore() {
 
+    const btn = document.getElementById("submitBtn");
+    btn.disabled = true;
+    btn.innerHTML = "⏳ Calculating...";
+
     let total = 0;
 
     for (let i = 1; i <= 25; i++) {
@@ -9,6 +13,8 @@ function calculateScore() {
 
         if (!answer) {
             alert("Please answer Question " + i);
+            btn.disabled = false;
+            btn.innerHTML = "📊 Get My Result";
             return;
         }
 
@@ -26,32 +32,36 @@ function calculateScore() {
     }
     else if (total <= 40) {
         status = "🟡 Good - Keep Improving";
-        advice = "Your smartphone usage is under control, but try reducing unnecessary screen time and avoid using your phone before bedtime.";
+        advice = "Your smartphone usage is under control. Try reducing unnecessary screen time and avoid using your phone before bedtime.";
         color = "orange";
     }
     else if (total <= 70) {
         status = "🟠 Moderate Smartphone Dependence";
-        advice = "Your phone usage is starting to affect your productivity and health. Reduce screen time, enable Focus Mode and schedule phone-free hours.";
+        advice = "Your phone usage is beginning to affect your productivity and health. Reduce screen time, enable Focus Mode, and schedule phone-free hours.";
         color = "#ff9800";
     }
     else {
         status = "🔴 High Smartphone Addiction";
-        advice = "Your smartphone usage may be seriously affecting your sleep, productivity and wellbeing. Consider limiting social media, turning off notifications and taking daily digital detox breaks.";
+        advice = "Your smartphone usage may be seriously affecting your sleep, productivity, and wellbeing. Consider limiting social media, turning off notifications, and taking daily digital detox breaks.";
         color = "red";
     }
 
-    // Display Result
+    // Show Result Immediately
     document.getElementById("result").style.display = "block";
-    document.getElementById("score").innerHTML = "📊 Your Score: <b>" + total + " / 100</b>";
+    document.getElementById("score").innerHTML =
+        "📊 Your Score: <b>" + total + " / 100</b>";
+
     document.getElementById("status").innerHTML = status;
     document.getElementById("status").style.color = color;
-    document.getElementById("advice").innerHTML = "<b>Personalized Advice</b><br><br>" + advice;
+
+    document.getElementById("advice").innerHTML =
+        "<b>Personalized Advice</b><br><br>" + advice;
 
     document.getElementById("result").scrollIntoView({
         behavior: "smooth"
     });
 
-    // Data for Google Sheets
+    // Prepare data
     const formData = {
         name: document.getElementById("name").value.trim(),
         age: document.getElementById("age").value.trim(),
@@ -60,22 +70,33 @@ function calculateScore() {
         result: status
     };
 
-    // Send data without blocking the page
-    fetch(API_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-            "Content-Type": "text/plain;charset=utf-8"
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(() => {
-        console.log("Data Saved");
-    })
-    .catch((error) => {
-        console.log("Save Error:", error);
-    });
+    // Upload in background after result is displayed
+    setTimeout(() => {
 
-    // Reset form for next submission
-    document.getElementById("surveyForm").reset();
+        fetch(API_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=UTF-8"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(() => {
+            console.log("Data sent successfully.");
+        })
+        .catch((err) => {
+            console.log("Background upload failed:", err);
+        });
+
+    }, 100);
+
+    // Reset form after 5 seconds
+    setTimeout(() => {
+
+        document.getElementById("surveyForm").reset();
+
+        btn.disabled = false;
+        btn.innerHTML = "📊 Get My Result";
+
+    }, 5000);
 }
