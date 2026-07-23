@@ -4,12 +4,11 @@ function calculateScore() {
 
     let total = 0;
 
-    // Calculate score from all 25 questions
     for (let i = 1; i <= 25; i++) {
 
-        let answer = document.querySelector('input[name="q' + i + '"]:checked');
+        let answer = document.querySelector('input[name="q" + i + '"]:checked');
 
-        if (answer == null) {
+        if (!answer) {
             alert("Please answer Question " + i);
             return;
         }
@@ -25,8 +24,7 @@ function calculateScore() {
 
         status = "🟢 Excellent Digital Balance";
 
-        advice =
-        "Great job! You have healthy smartphone habits. Continue maintaining a balanced digital lifestyle.";
+        advice = "Great job! You have healthy smartphone habits. Continue maintaining a balanced digital lifestyle.";
 
         color = "green";
 
@@ -34,8 +32,7 @@ function calculateScore() {
 
         status = "🟡 Good - Keep Improving";
 
-        advice =
-        "Your smartphone usage is under control, but try reducing unnecessary screen time and avoid using your phone before bedtime.";
+        advice = "Your smartphone usage is under control, but try reducing unnecessary screen time and avoid using your phone before bedtime.";
 
         color = "orange";
 
@@ -43,8 +40,7 @@ function calculateScore() {
 
         status = "🟠 Moderate Smartphone Dependence";
 
-        advice =
-        "Your phone usage is starting to affect your productivity and health. Reduce screen time, enable Focus Mode, and schedule phone-free hours.";
+        advice = "Your phone usage is starting to affect your productivity and health. Reduce screen time, enable Focus Mode, and schedule phone-free hours.";
 
         color = "#ff9800";
 
@@ -52,14 +48,12 @@ function calculateScore() {
 
         status = "🔴 High Smartphone Addiction";
 
-        advice =
-        "Your smartphone usage may be seriously affecting your sleep, productivity, and wellbeing. Consider limiting social media, turning off notifications, and taking daily digital detox breaks.";
+        advice = "Your smartphone usage may be seriously affecting your sleep, productivity, and wellbeing. Consider limiting social media, turning off notifications, and taking daily digital detox breaks.";
 
         color = "red";
 
     }
 
-    // Show Result
     document.getElementById("result").style.display = "block";
 
     document.getElementById("score").innerHTML =
@@ -71,37 +65,48 @@ function calculateScore() {
     document.getElementById("advice").innerHTML =
         "<b>Personalized Advice</b><br><br>" + advice;
 
-    // Scroll to Result
     document.getElementById("result").scrollIntoView({
         behavior: "smooth"
     });
 
-    // ==========================
-    // Save Data to Google Sheets
-    // ==========================
-
     const formData = {
+
         name: document.getElementById("name").value,
+
         age: document.getElementById("age").value,
+
         occupation: document.getElementById("occupation").value,
+
         score: total,
+
         result: status
+
     };
 
-    fetch(API_URL, {
-        method: "POST",
-        redirect: "follow",
-        headers: {
-            "Content-Type": "text/plain;charset=utf-8"
+    fetch(API_URL,{
+
+        method:"POST",
+
+        mode:"no-cors",
+
+        headers:{
+
+            "Content-Type":"text/plain;charset=utf-8"
+
         },
-        body: JSON.stringify(formData)
+
+        body:JSON.stringify(formData)
+
     })
-    .then(response => response.text())
-    .then(data => {
-        console.log("Saved to Google Sheet");
+    .then(()=>{
+
+        console.log("Data Sent Successfully");
+
     })
-    .catch(error => {
-        console.error("Error:", error);
+    .catch((err)=>{
+
+        console.log(err);
+
     });
 
 }
