@@ -3,343 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Prevent Browser Cache -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
 <title>Digital Wellbeing Assessment</title>
-
 <link rel="stylesheet" href="digital-style.css">
-
 </head>
-
 <body>
 
-<div class="container">
-
-<h1>📱 Digital Wellbeing Assessment</h1>
-
-<p class="subtitle">
-Discover your smartphone habits and receive a personalized Digital Wellbeing Report.
-</p>
-
-<form id="surveyForm">
-
-<div class="card">
-
-<h2>Personal Information</h2>
-
-<label>Full Name</label>
-<input type="text" id="name" required>
-
-<label>Age</label>
-<input type="number" id="age" required>
-
-<label>Occupation</label>
-
-<select id="occupation">
-
-<option>Student</option>
-
-<option>Teacher</option>
-
-<option>Working Professional</option>
-
-<option>Business</option>
-
-<option>Other</option>
-
-</select>
-
-</div>
-
-<hr>
-
-<h2>Question 1</h2>
-
-<p>How many hours do you use your smartphone daily?</p>
-
-<label><input type="radio" name="q1" value="0"> Less than 2 Hours</label><br>
-
-<label><input type="radio" name="q1" value="1"> 2-4 Hours</label><br>
-
-<label><input type="radio" name="q1" value="2"> 4-6 Hours</label><br>
-
-<label><input type="radio" name="q1" value="3"> 6-8 Hours</label><br>
-
-<label><input type="radio" name="q1" value="4"> More than 8 Hours</label>
-
-<hr>
-
-<h2>Question 2</h2>
-
-<p>How many times do you check your phone each day?</p>
-
-<label><input type="radio" name="q2" value="0"> Less than 20</label><br>
-
-<label><input type="radio" name="q2" value="1"> 20-50</label><br>
-
-<label><input type="radio" name="q2" value="2"> 50-100</label><br>
-
-<label><input type="radio" name="q2" value="3"> 100-150</label><br>
-
-<label><input type="radio" name="q2" value="4"> More than 150</label>
-
-<hr>
-
-<h2>Question 3</h2>
-
-<p>Do you check your phone immediately after waking up?</p>
-
-<label><input type="radio" name="q3" value="0"> Never</label><br>
-
-<label><input type="radio" name="q3" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q3" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 4</h2>
-
-<p>Can you stay away from your phone for 2 hours?</p>
-
-<label><input type="radio" name="q4" value="0"> Easily</label><br>
-
-<label><input type="radio" name="q4" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q4" value="4"> No</label>
-
-<hr>
-
-<h2>Question 5</h2>
-
-<p>How often do you use your phone while eating?</p>
-
-<label><input type="radio" name="q5" value="0"> Never</label><br>
-
-<label><input type="radio" name="q5" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q5" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 6</h2>
-
-<p>How often do you use your phone before sleeping?</p>
-
-<label><input type="radio" name="q6" value="0"> Never</label><br>
-
-<label><input type="radio" name="q6" value="1"> Less than 30 min</label><br>
-
-<label><input type="radio" name="q6" value="2"> 30–60 min</label><br>
-
-<label><input type="radio" name="q6" value="4"> More than 1 hour</label>
-
-<hr>
-
-<h2>Question 7</h2>
-
-<p>Have you lost sleep because of your phone?</p>
-
-<label><input type="radio" name="q7" value="0"> Never</label><br>
-
-<label><input type="radio" name="q7" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q7" value="4"> Often</label>
-
-<hr>
-
-<h2>Question 8</h2>
-
-<p>Do you feel anxious when your phone battery is low?</p>
-
-<label><input type="radio" name="q8" value="0"> Never</label><br>
-
-<label><input type="radio" name="q8" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q8" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 9</h2>
-
-<p>How much time do you spend on social media daily?</p>
-
-<label><input type="radio" name="q9" value="0"> Less than 30 min</label><br>
-
-<label><input type="radio" name="q9" value="1"> 30–60 min</label><br>
-
-<label><input type="radio" name="q9" value="2"> 1–3 Hours</label><br>
-
-<label><input type="radio" name="q9" value="4"> More than 3 Hours</label>
-
-<hr>
-
-<h2>Question 10</h2>
-
-<p>Do you use your phone during study/work?</p>
-
-<label><input type="radio" name="q10" value="0"> Never</label><br>
-
-<label><input type="radio" name="q10" value="2"> Sometimes</label><br>
-
-<label><input type="radio" name="q10" value="4"> Frequently</label>
-
-<hr>
-<hr>
-
-<h2>Question 11</h2>
-<p>How often do you pick up your phone without any reason?</p>
-
-<label><input type="radio" name="q11" value="0"> Rarely</label><br>
-<label><input type="radio" name="q11" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q11" value="4"> Very Often</label>
-
-<hr>
-
-<h2>Question 12</h2>
-<p>Do you feel your phone reduces your productivity?</p>
-
-<label><input type="radio" name="q12" value="0"> No</label><br>
-<label><input type="radio" name="q12" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q12" value="4"> Yes</label>
-
-<hr>
-
-<h2>Question 13</h2>
-<p>Do you exercise without using your phone?</p>
-
-<label><input type="radio" name="q13" value="0"> Yes</label><br>
-<label><input type="radio" name="q13" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q13" value="4"> No</label>
-
-<hr>
-
-<h2>Question 14</h2>
-<p>How often do you talk face-to-face instead of texting?</p>
-
-<label><input type="radio" name="q14" value="0"> Mostly Face-to-Face</label><br>
-<label><input type="radio" name="q14" value="2"> Equal</label><br>
-<label><input type="radio" name="q14" value="4"> Mostly Texting</label>
-
-<hr>
-
-<h2>Question 15</h2>
-<p>Can you spend a whole day without social media?</p>
-
-<label><input type="radio" name="q15" value="0"> Yes</label><br>
-<label><input type="radio" name="q15" value="2"> Maybe</label><br>
-<label><input type="radio" name="q15" value="4"> No</label>
-
-<hr>
-
-<h2>Question 16</h2>
-<p>Do you use your phone while walking?</p>
-
-<label><input type="radio" name="q16" value="0"> Never</label><br>
-<label><input type="radio" name="q16" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q16" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 17</h2>
-<p>How often do notifications distract you?</p>
-
-<label><input type="radio" name="q17" value="0"> Never</label><br>
-<label><input type="radio" name="q17" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q17" value="4"> Frequently</label>
-
-<hr>
-
-<h2>Question 18</h2>
-<p>Do you feel stressed when you cannot access your phone?</p>
-
-<label><input type="radio" name="q18" value="0"> Never</label><br>
-<label><input type="radio" name="q18" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q18" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 19</h2>
-<p>Do you use your phone during family conversations?</p>
-
-<label><input type="radio" name="q19" value="0"> Never</label><br>
-<label><input type="radio" name="q19" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q19" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 20</h2>
-<p>Would you like to reduce your smartphone usage?</p>
-
-<label><input type="radio" name="q20" value="0"> Already Under Control</label><br>
-<label><input type="radio" name="q20" value="2"> Maybe</label><br>
-<label><input type="radio" name="q20" value="4"> Yes</label>
-
-<hr>
-<h2>Question 21</h2>
-<p>Do you use your phone while eating with family?</p>
-
-<label><input type="radio" name="q21" value="0"> Never</label><br>
-<label><input type="radio" name="q21" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q21" value="4"> Always</label>
-
-<hr>
-
-<h2>Question 22</h2>
-<p>How often do you postpone important work because of your phone?</p>
-
-<label><input type="radio" name="q22" value="0"> Never</label><br>
-<label><input type="radio" name="q22" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q22" value="4"> Often</label>
-
-<hr>
-
-<h2>Question 23</h2>
-<p>How often do you play mobile games?</p>
-
-<label><input type="radio" name="q23" value="0"> Never</label><br>
-<label><input type="radio" name="q23" value="1"> Less than 30 min</label><br>
-<label><input type="radio" name="q23" value="2"> 30–60 min</label><br>
-<label><input type="radio" name="q23" value="4"> More than 1 hour</label>
-
-<hr>
-
-<h2>Question 24</h2>
-<p>Do you think your smartphone improves your quality of life?</p>
-
-<label><input type="radio" name="q24" value="0"> Yes</label><br>
-<label><input type="radio" name="q24" value="2"> Sometimes</label><br>
-<label><input type="radio" name="q24" value="4"> No</label>
-
-<hr>
-
-<h2>Question 25</h2>
-<p>Overall, how would you rate your smartphone usage?</p>
-
-<label><input type="radio" name="q25" value="0"> Healthy</label><br>
-<label><input type="radio" name="q25" value="2"> Moderate</label><br>
-<label><input type="radio" name="q25" value="4"> Excessive</label>
-
-<hr><br>
-
-<button type="button" onclick="calculateScore()">
-📊 Get My Result
-</button>
-
+<!--
+IMPORTANT:
+Use the same questionnaire body you already have (Questions 1–25).
+The only required HTML changes are:
+1. <form id="surveyForm" onsubmit="return false;">
+2. <script src="digital-script.js?v=4"></script>
+3. The cache-control meta tags above.
+-->
+
+<form id="surveyForm" onsubmit="return false;">
+<!-- Paste your existing Personal Information section and Questions 1–25 here -->
 </form>
 
 <div id="result" class="result" style="display:none;">
-
 <h2>📱 Your Digital Wellbeing Report</h2>
-
 <h3 id="score"></h3>
-
 <h3 id="status"></h3>
-
 <p id="advice"></p>
-
 </div>
 
-</div>
-
-<script src="digital-script.js?v=3"></script>
-
+<script src="digital-script.js?v=4"></script>
 </body>
 </html>
